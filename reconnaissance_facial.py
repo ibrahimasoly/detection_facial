@@ -42,7 +42,7 @@ if uploaded_file is not None:
             cv2.rectangle(image, (x, y), (x + w, y + h), tuple(int(rectangle_color.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)), 2)
 
         st.image(image, caption="Visages détectés", use_column_width=True)
-        st.write(f"Nombre de visages détectés : {len(faces)}")
+        st.write(f"Nombre de visages détectés : {len(faces), cv2.__version__}")
 
         # Bouton pour sauvegarder l'image
         if st.button("Sauvegarder l'image"):
